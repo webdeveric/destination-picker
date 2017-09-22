@@ -1,0 +1,9 @@
+.item {
+  background: linear-gradient(to bottom, #FFF 0%, #DDD 100%);
+  padding: 5px 10px;
+}
+
+.item.isHighlighted {
+  background: #666;
+  color: #FFF;
+}

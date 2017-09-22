@@ -1,0 +1,30 @@
+:root {
+  --bg-color: #E0E0E0;
+}
+
+.destination-picker {
+  background: var(--bg-color);
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  position: absolute;
+  width: 100%;
+  background: #FFF;
+  padding: 0;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 0 0 2px rgba(0,0,0,.25);
+  transition: opacity ease-in-out 250ms;
+}
+
+.isLoading {
+  box-shadow: 0 0 10px rgba(255,0,0,.25);
+  cursor: wait;
+  opacity: .75;
+}

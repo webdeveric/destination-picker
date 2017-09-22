@@ -1,0 +1,40 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "spec": true,
+        "useBuiltIns": true,
+        "modules": false,
+        "targets": {
+          "browsers": [
+            "last 2 versions"
+          ]
+        }
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    [
+      "transform-class-properties",
+      {
+        "spec": true
+      }
+    ],
+    "transform-object-rest-spread",
+    "external-helpers"
+  ],
+  "env": {
+    "production": {
+      "presets": [
+        "minify",
+        "react-optimize"
+      ],
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements"
+      ]
+    }
+  }
+}
