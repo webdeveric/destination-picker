@@ -24,9 +24,6 @@ export default {
   },
   context: 'window',
   plugins: [
-    replace({
-      'process.env.NODE_ENV': JSON.stringify( process.env.NODE_ENV ),
-    }),
     image({
     }),
     resolve({
@@ -63,6 +60,9 @@ export default {
     eslint({
       configFile: 'eslint-config-webdeveric',
       include: 'src/**/*.js'
+    }),
+    replace({
+      'process.env.NODE_ENV': JSON.stringify( process.env.NODE_ENV ),
     }),
     babel(),
     ( isProd && uglify() ),

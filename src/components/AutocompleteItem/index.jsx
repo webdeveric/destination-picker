@@ -11,7 +11,7 @@ function AutocompleteItem(props)
   });
 
   return (
-    <div key={makeKey('item', props.name, props.id)} className={className} onClick={props.onClick} onMouseEnter={props.onMouseEnter} data-id={props.id} data-level={props.place_level_assigned || 'none'}>
+    <div key={makeKey('item', props.name, props.id)} className={className} data-id={props.id} data-level={props.place_level_assigned || 'none'}>
       {props.name}
     </div>
   );

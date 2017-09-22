@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Autocomplete from 'react-autocomplete';
 import styles from './DestinationPicker.css';
 import AutocompleteItem from '../AutocompleteItem';
-import { classNames, delay, makeKey } from '../../helpers';
+import { classNames, makeKey } from '../../helpers';
 
 class DestinationPicker extends Component
 {
@@ -41,6 +41,8 @@ class DestinationPicker extends Component
       value,
       loading: false,
     });
+
+    console.log(item);
   };
 
   renderMenu = (items, value) => {
@@ -48,6 +50,8 @@ class DestinationPicker extends Component
       [ styles.menu ]: true,
       [ styles.isLoading ]: this.state.loading,
     });
+
+    console.log(value);
 
     return (
       <div className={className} data-num-items={items.length}>
